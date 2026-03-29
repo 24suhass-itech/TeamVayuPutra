@@ -81,9 +81,8 @@ nav {
 /* HERO (LEFT BOX FIXED) */
 /* ========================= */
 .hero {
-    margin: 120px 0 0 80px;
+    margin: 120px 0 0 140px;
     padding: 30px;
-
     width: fit-content;
     max-width: 520px;
 
@@ -145,9 +144,9 @@ section:not(.hero) {
 /* DRONE IMAGE (RIGHT SIDE) */
 /* ========================= */
 .drone-img {
-    position: fixed;   /* 👈 THIS FIXES SCROLL ISSUE */
-    right: 5%;
-    top: 55%;
+    position: absolute;   /* 👈 THIS FIXES SCROLL ISSUE */
+    right: 8%;
+    top: 47%;
     transform: translateY(-50%);
 
     width: 550px;
