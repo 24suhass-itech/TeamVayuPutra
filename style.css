@@ -224,15 +224,6 @@ section:has(.drone-img) {
 }
 @media (max-width: 768px) {
 
-    /* GLOBAL */
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        font-size: 14px;
-    }
-
     /* NAVBAR */
     nav {
         padding: 12px 16px;
@@ -242,25 +233,7 @@ section:has(.drone-img) {
         font-size: 14px;
     }
 
-    /* 🔥 MAKE BODY FLEX (IMPORTANT FOR ORDER) */
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* ========================= */
-    /* DRONE → TOP */
-    /* ========================= */
-    section:has(.drone-img) {
-        order: -1; /* move to top */
-
-        margin: 90px 0 20px 0;
-        padding: 0;
-
-        background: none !important;
-        border: none !important;
-    }
-
+    /* DRONE TOP */
     .drone-img {
         position: relative !important;
         top: auto !important;
@@ -271,88 +244,57 @@ section:has(.drone-img) {
         max-width: 300px;
 
         display: block;
-        margin: 0 auto;
+        margin: 90px auto 20px auto;
     }
 
-    /* ========================= */
+    section:has(.drone-img) {
+        margin: 0;
+        padding: 0;
+        background: none !important;
+        border: none !important;
+    }
+
     /* HERO */
-    /* ========================= */
     .hero {
-        order: 0;
-
-        margin: 20px 15px;
-        padding: 20px;
-
-        width: auto;
-        max-width: 100%;
-
+        margin: 20px;
         text-align: center;
+        width: auto;
     }
 
     .bg-text {
         font-size: 50px;
         left: 50%;
         transform: translateX(-50%);
-        top: 10px;
     }
 
     .logo-img {
         width: 90px;
-        margin-bottom: 10px;
-    }
-
-    .hero h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
     }
 
     .desc {
+        max-width: 100%;
         font-size: 13px;
         line-height: 1.6;
-        max-width: 100%;
     }
 
-    /* ========================= */
     /* SECTIONS */
-    /* ========================= */
     section:not(.hero) {
-        margin: 40px 15px;
-        padding: 18px;
-
+        margin: 40px 20px;
         width: auto;
         max-width: 100%;
-
-        border-radius: 12px;
-
-        text-align: center;
+        padding: 18px;
     }
 
-    h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-size: 13px;
-        line-height: 1.6;
-    }
-
-    /* ========================= */
     /* TEAM */
-    /* ========================= */
     .team-gallery img {
-        width: 100%;
+        width: 90%;
         max-width: 260px;
-        border-radius: 10px;
     }
 
-    /* ========================= */
     /* MENU */
-    /* ========================= */
     .menu {
         right: 10px;
         width: 170px;
-        padding: 12px;
     }
 
     .menu a {
