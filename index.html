@@ -14,7 +14,16 @@
 <!-- NAVBAR -->
 <nav>
     <h1 class="logo-text">VAYUPUTRA</h1>
-    <div class="menu">
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu" id="menu">
         <a href="results.html">Results</a>
         <a href="sponsors.html">Sponsors</a>
         <a href="updates.html">Updates</a>
@@ -25,7 +34,6 @@
 
 <!-- HERO -->
 <section class="hero">
-
     <h1 class="bg-text">VAYUPUTRA</h1>
 
     <img src="logo.png" class="logo-img">
@@ -39,13 +47,11 @@
         From flight control systems to intelligent automation, we aim to 
         build efficient and impactful aerial solutions.
     </p>
-
 </section>
 
 <!-- ABOUT -->
 <section>
     <h2>About Us</h2>
-
     <p>
         Team VayuPutra is a student-driven drone development team working 
         on cutting-edge UAV technologies.
@@ -62,7 +68,6 @@
 <!-- MISSION -->
 <section>
     <h2>Our Mission</h2>
-
     <p>
         Our mission is to revolutionize aerial systems through engineering 
         excellence. We aim to contribute to agriculture, surveillance, 
@@ -73,12 +78,13 @@
 <!-- TEAM -->
 <section>
     <h2>Our Team</h2>
-
     <div class="team-gallery">
         <img src="team1.jpg">
     </div>
-
 </section>
+
+<!-- JS -->
+<script src="script.js"></script>
 
 </body>
 </html>

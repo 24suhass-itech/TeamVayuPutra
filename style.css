@@ -50,10 +50,50 @@ nav {
     letter-spacing: 3px;
 }
 
-/* MENU */
-.menu {
+/* ========================= */
+/* 🔥 HAMBURGER ADDED */
+/* ========================= */
+.hamburger {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 2px;
+    background: white;
+}
+
+/* ========================= */
+/* MENU MODIFIED (ONLY VISIBILITY) */
+/* ========================= */
+.menu {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: 0.3s ease;
+}
+
+.menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .menu a {
@@ -107,9 +147,12 @@ nav {
 
 /* LOGO */
 .logo-img {
+    display: block;
+    margin: 0 auto 20px auto;
+    
     width: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+
     box-shadow: 0 0 30px rgba(0,255,255,0.5);
 }
 
@@ -144,7 +187,7 @@ section:not(.hero) {
 /* DRONE IMAGE (RIGHT SIDE) */
 /* ========================= */
 .drone-img {
-    position: absolute;   /* 👈 THIS FIXES SCROLL ISSUE */
+    position: absolute;
     right: 8%;
     top: 47%;
     transform: translateY(-50%);
