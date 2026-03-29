@@ -311,6 +311,7 @@ section:has(.drone-img) {
     }
 
     section:has(.drone-img) {
+        order: -1;
         margin: 20px 0;
         padding: 0;
         background: none !important;
