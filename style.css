@@ -224,7 +224,7 @@ section:has(.drone-img) {
 }
 @media (max-width: 768px) {
 
-    /* GLOBAL RESET */
+    /* GLOBAL */
     * {
         box-sizing: border-box;
     }
@@ -242,9 +242,45 @@ section:has(.drone-img) {
         font-size: 14px;
     }
 
-    /* HERO (CLEAN CARD) */
+    /* 🔥 MAKE BODY FLEX (IMPORTANT FOR ORDER) */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ========================= */
+    /* DRONE → TOP */
+    /* ========================= */
+    section:has(.drone-img) {
+        order: -1; /* move to top */
+
+        margin: 90px 0 20px 0;
+        padding: 0;
+
+        background: none !important;
+        border: none !important;
+    }
+
+    .drone-img {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        transform: none !important;
+
+        width: 90%;
+        max-width: 300px;
+
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* ========================= */
+    /* HERO */
+    /* ========================= */
     .hero {
-        margin: 90px 15px 30px 15px;
+        order: 0;
+
+        margin: 20px 15px;
         padding: 20px;
 
         width: auto;
@@ -273,9 +309,12 @@ section:has(.drone-img) {
     .desc {
         font-size: 13px;
         line-height: 1.6;
+        max-width: 100%;
     }
 
-    /* SECTIONS (STACKED CARDS) */
+    /* ========================= */
+    /* SECTIONS */
+    /* ========================= */
     section:not(.hero) {
         margin: 40px 15px;
         padding: 18px;
@@ -284,6 +323,8 @@ section:has(.drone-img) {
         max-width: 100%;
 
         border-radius: 12px;
+
+        text-align: center;
     }
 
     h2 {
@@ -296,35 +337,18 @@ section:has(.drone-img) {
         line-height: 1.6;
     }
 
-    /* DRONE (SEPARATE BLOCK) */
-    .drone-img {
-        position: relative !important;
-        top: auto !important;
-        right: auto !important;
-        transform: none !important;
-
-        width: 85%;
-        max-width: 280px;
-
-        display: block;
-        margin: 20px auto;
-    }
-
-    section:has(.drone-img) {
-        order: -1;
-        margin: 20px 0;
-        padding: 0;
-        background: none !important;
-        border: none !important;
-    }
-
-    /* TEAM IMAGE */
+    /* ========================= */
+    /* TEAM */
+    /* ========================= */
     .team-gallery img {
         width: 100%;
         max-width: 260px;
+        border-radius: 10px;
     }
 
+    /* ========================= */
     /* MENU */
+    /* ========================= */
     .menu {
         right: 10px;
         width: 170px;
