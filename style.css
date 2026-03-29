@@ -1,0 +1,182 @@
+/* BODY */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background: black;
+}
+
+/* VIDEO BACKGROUND */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* DARK OVERLAY + GLOW */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: 
+        rgba(0,0,0,0.7),
+        radial-gradient(circle at center, rgba(0,255,255,0.08), transparent 60%);
+    z-index: -1;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo-text {
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #ddd;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background: cyan;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ========================= */
+/* HERO (LEFT BOX FIXED) */
+/* ========================= */
+.hero {
+    margin: 120px 0 0 80px;
+    padding: 30px;
+
+    width: fit-content;
+    max-width: 520px;
+
+    text-align: left;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    position: relative;
+}
+
+/* BACKGROUND TEXT */
+.bg-text {
+    position: absolute;
+    font-size: 140px;
+    opacity: 0.03;
+    top: -20px;
+    left: 0;
+}
+
+/* LOGO */
+.logo-img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 0 30px rgba(0,255,255,0.5);
+}
+
+/* TEXT */
+.desc {
+    max-width: 480px;
+    line-height: 1.7;
+    color: #bbb;
+}
+
+/* ========================= */
+/* OTHER SECTIONS (CENTER) */
+/* ========================= */
+section:not(.hero) {
+    display: block;
+    margin: 100px auto;
+    padding: 25px 30px;
+
+    width: fit-content;
+    max-width: 600px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ========================= */
+/* DRONE IMAGE (RIGHT SIDE) */
+/* ========================= */
+.drone-img {
+    position: fixed;   /* 👈 THIS FIXES SCROLL ISSUE */
+    right: 5%;
+    top: 55%;
+    transform: translateY(-50%);
+
+    width: 550px;
+    max-width: 40%;
+
+    background: none;
+    border: none;
+    box-shadow: none;
+
+    filter: drop-shadow(0 0 40px rgba(0,255,255,0.4));
+    z-index: 5;
+}
+
+/* REMOVE BOX AROUND DRONE */
+section:has(.drone-img) {
+    background: none !important;
+    border: none !important;
+    backdrop-filter: none !important;
+}
+
+/* ========================= */
+/* TEAM */
+/* ========================= */
+.team-gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.team-gallery img {
+    width: 320px;
+    border-radius: 10px;
+}
